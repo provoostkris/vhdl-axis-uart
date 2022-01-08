@@ -26,10 +26,10 @@ tb_uart_axis_lb.vhd  : axi master ans slave ports are connected together
 
 To test on a DE-10 nano board, use a USB-TTL adapter and connect:
 
-USB-TTL <> DE-10 nano
--GND <> GPIO1(12)
--RXI <> GPIO1(01)
--TXD <> GPIO0(40)
+- USB-TTL <> DE-10 nano
+- GND <> GPIO1(12)
+- RXI <> GPIO1(01)
+- TXD <> GPIO0(40)
 
 (note GPIO index as on the silk screen of the PCB)
 
