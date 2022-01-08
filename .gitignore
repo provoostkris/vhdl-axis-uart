@@ -1,2 +1,7 @@
 debug/
+
 modelsim/work
+
+quartus/db
+quartus/incremental_db
+quartus/output_files

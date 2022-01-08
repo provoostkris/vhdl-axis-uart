@@ -21,7 +21,34 @@ tb_uart_axis_lb.vhd  : axi master ans slave ports are connected together
                        to test loopback operation
 ```
 
+### demonstration setup
+[quartus](quartus/) folder contains a project for building a DE-10 nano release
+To test on a DE-10 nano board, use a USB-TTL adapter and connect:
+USB-TTL <> DE-10 nano
+GND <> GPIO1(12)
+RXI <> GPIO1(01)
+TXD <> GPIO0(40)
+(note GPIO index as on the silk screen of the PCB)
+
+resources
+```
+Logic utilization (in ALMs)	36 / 41,910 ( < 1 % )
+Total registers	66
+Total pins	19 / 314 ( 6 % )
+Total virtual pins	0
+Total block memory bits	0 / 5,662,720 ( 0 % )
+Total DSP Blocks	0 / 112 ( 0 % )
+```
+example output with termite (115200,8,0,1) :
+```
+hello world.
+hello world.
+mixed123456789+-*/?
+mixed123456789+-*/?
+```
+
 [impl](impl/) folder contains an example constraints file for Arty-Z7 board.
+
 
 `makefile` is given for GHDL simulation support. Install GHDL (to simulate) and optionally GTKWave (to see the waveform), add them to the `PATH`, and run `make` and `make simulate`.
 
