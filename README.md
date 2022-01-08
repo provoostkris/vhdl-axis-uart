@@ -22,15 +22,18 @@ tb_uart_axis_lb.vhd  : axi master ans slave ports are connected together
 ```
 
 ### demonstration setup
-[quartus](quartus/) folder contains a project for building a DE-10 nano release
+[quartus](quartus/) folder contains a project for building a DE-10 nano release.
+
 To test on a DE-10 nano board, use a USB-TTL adapter and connect:
+
 USB-TTL <> DE-10 nano
-GND <> GPIO1(12)
-RXI <> GPIO1(01)
-TXD <> GPIO0(40)
+-GND <> GPIO1(12)
+-RXI <> GPIO1(01)
+-TXD <> GPIO0(40)
+
 (note GPIO index as on the silk screen of the PCB)
 
-resources
+Resources
 ```
 Logic utilization (in ALMs)	36 / 41,910 ( < 1 % )
 Total registers	66
@@ -39,7 +42,7 @@ Total virtual pins	0
 Total block memory bits	0 / 5,662,720 ( 0 % )
 Total DSP Blocks	0 / 112 ( 0 % )
 ```
-example output with termite (115200,8,0,1) :
+Example serial console log (using termite : 115200,8,0,1 ) :
 ```
 hello world.
 hello world.
