@@ -35,8 +35,8 @@ To test on a DE-10 nano board, use a USB-TTL adapter and connect:
 
 Resources
 ```
-Logic utilization (in ALMs)	36 / 41,910 ( < 1 % )
-Total registers	66
+Logic utilization (in ALMs)	40 / 41,910 ( < 1 % )
+Total registers	64
 Total pins	19 / 314 ( 6 % )
 Total virtual pins	0
 Total block memory bits	0 / 5,662,720 ( 0 % )

@@ -14,6 +14,8 @@ set_false_path -from [get_ports { KEY[0] KEY[1] } ]           -to [get_registers
 set_false_path -from [get_ports { SW[0] SW[1] SW[2] SW[3] } ] -to [get_registers *]
 set_false_path                                                -to [get_ports { Led[*] } ]
 
-# general directives for PLL usage
-#derive_pll_clocks
-#derive_clock_uncertainty
+
+
+# set false paths for UART
+set_false_path -from [get_ports { rxd } ]
+set_false_path -to   [get_ports { txd } ]
