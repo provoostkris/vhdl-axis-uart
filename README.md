@@ -21,8 +21,9 @@ tb_uart_axis_lb.vhd  : axi master ans slave ports are connected together
                        to test loopback operation
 ```
 
-### demonstration setup
-[quartus](quartus/) folder contains a project for building a DE-10 nano release.
+### Demonstration setups
+
+#### DE10 nano
 
 To test on a DE-10 nano board, use a USB-TTL adapter and connect:
 
@@ -33,15 +34,6 @@ To test on a DE-10 nano board, use a USB-TTL adapter and connect:
 
 (note GPIO index as on the silk screen of the PCB)
 
-Resources
-```
-Logic utilization (in ALMs)	40 / 41,910 ( < 1 % )
-Total registers	64
-Total pins	19 / 314 ( 6 % )
-Total virtual pins	0
-Total block memory bits	0 / 5,662,720 ( 0 % )
-Total DSP Blocks	0 / 112 ( 0 % )
-```
 
 Example serial console log (using termite : 115200,8,0,1 ) :
 ```
@@ -51,9 +43,11 @@ mixed123456789+-*/?
 mixed123456789+-*/?
 ```
 
-[impl](impl/)         folder contains an example constraints file for Arty-Z7 board.
-[quartus](quartus/)   folder contains an example constraints file for DE-10 nano board.
-[modelsim](modelsim/) folder contains a simulation script to run with modelsim tool
+
+## Other folders
+- [impl](impl/)         folder contains an example constraints file for Arty-Z7 board.
+- [quartus](quartus/)   folder contains an example constraints file for DE-10 nano board.
+- [modelsim](modelsim/) folder contains a simulation script to run with modelsim tool
 
 
 `makefile` is given for GHDL simulation support. Install GHDL (to simulate) and optionally GTKWave (to see the waveform), add them to the `PATH`, and run `make` and `make simulate`.
