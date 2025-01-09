@@ -62,5 +62,5 @@ mixed123456789+-*/?
 - Configurable data width (by using the `DATA_WIDTH` generic)
 - Configurable stop width (by using the `STOP_WIDTH` generic)
 - Received data will get overwritten with the incoming data even if it is not read by the master (no tready)
-- Parity is not implemented
+- Parity logic is added, but not implementation tested
 - Stop only supports integers (1, 2)
