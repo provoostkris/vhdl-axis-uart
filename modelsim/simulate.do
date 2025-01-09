@@ -1,9 +1,18 @@
+
+
+echo "Create workspace"
+
+  proc delete_lib { lib } { if { [file exists $lib]} { file delete -force $lib } }
+  proc ensure_lib { lib } { if ![file isdirectory $lib] { vlib $lib } }
+
+  delete_lib          work
+  ensure_lib          work
+
 echo "Compiling design"
 
-  vlib work
-  vcom  -quiet -work work ../rtl/uart_rx.vhd
-  vcom  -quiet -work work ../rtl/uart_tx.vhd
-  vcom  -quiet -work work ../rtl/uart.vhd
+  vcom   -work work ../rtl/uart_rx.vhd
+  vcom   -work work ../rtl/uart_tx.vhd
+  vcom   -work work ../rtl/uart.vhd
 
 
 echo "Compiling test bench"
@@ -21,7 +30,9 @@ echo "adding waves"
 
   delete wave /*
 
-  add wave                 -group "uut i/o"   -ports            /tb_uart_axis_lb/uut/*
+  add wave                 -group "UART"               /tb_uart_axis_lb/uut/*
+  add wave                 -group "RX"                 /tb_uart_axis_lb/uut/urx/*
+  add wave                 -group "TX"                 /tb_uart_axis_lb/uut/utx/*
 
 
 echo "view wave forms"
