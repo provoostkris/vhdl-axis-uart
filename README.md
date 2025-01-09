@@ -42,6 +42,7 @@ Total virtual pins	0
 Total block memory bits	0 / 5,662,720 ( 0 % )
 Total DSP Blocks	0 / 112 ( 0 % )
 ```
+
 Example serial console log (using termite : 115200,8,0,1 ) :
 ```
 hello world.
@@ -50,7 +51,9 @@ mixed123456789+-*/?
 mixed123456789+-*/?
 ```
 
-[impl](impl/) folder contains an example constraints file for Arty-Z7 board.
+[impl](impl/)         folder contains an example constraints file for Arty-Z7 board.
+[quartus](quartus/)   folder contains an example constraints file for DE-10 nano board.
+[modelsim](modelsim/) folder contains a simulation script to run with modelsim tool
 
 
 `makefile` is given for GHDL simulation support. Install GHDL (to simulate) and optionally GTKWave (to see the waveform), add them to the `PATH`, and run `make` and `make simulate`.

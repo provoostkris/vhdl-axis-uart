@@ -7,6 +7,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use ieee.std_logic_misc.all;
 
 entity tb_uart_axis_lb is
 end tb_uart_axis_lb;
@@ -76,9 +77,9 @@ begin
             if PARITY /= "NONE" then
                 -- checksum
                 if PARITY = "ODD" then
-                    rxd <= (xor data) xor '1';
+                    rxd <= xor_reduce(std_logic_vector((data))) xor '1';
                 else
-                    rxd <= (xor data) xor '0';
+                    rxd <= xor_reduce(std_logic_vector((data))) xor '0';
                 end if;
                 wait for bit_time;
             end if;

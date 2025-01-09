@@ -3,6 +3,8 @@
 
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_misc.all;
 
 entity uart_tx is
     generic (
@@ -69,7 +71,7 @@ begin
                             if PARITY = "NONE" then
                                 state := st_stop;
                             else
-                                par := xor txbuf;
+                                par := xor_reduce(txbuf);
                                 if PARITY = "ODD" then
                                     par := par xor '1';
                                 else
